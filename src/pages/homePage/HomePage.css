@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 600px;
+  gap: 10px;
+}
+
+.firstContainer {
+  width: 50%;
+  background-color: brown;
+}
+
+.secondContainer {
+  width: 50%;
+}
+
+.wrapperContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.displayContainer {
+  background-color: black;
+  height: 100px;
+  width: 586px;
+  border: 8px solid blueviolet;
+}

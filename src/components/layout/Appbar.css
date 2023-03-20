@@ -1,0 +1,39 @@
+.OuterBox {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.InnerBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 600px;
+}
+
+.FirstBox {
+  height: 73px;
+  background-color: black;
+}
+
+.SecondTitleBox {
+  height: 58px;
+  background-color: blueviolet;
+}
+
+.TitleText {
+  position: relative;
+  color: aqua;
+  font-family: "FFF Forward";
+  font-size: 60px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.Underline {
+  margin-top: 8px;
+  height: 4px;
+  background-color: red;
+}
