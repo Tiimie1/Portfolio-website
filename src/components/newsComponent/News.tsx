@@ -44,7 +44,7 @@ const News = () => {
           </div>
         </>
       ) : (
-        <p>Loading news...</p>
+        <p style={{ margin: 0, padding: 4 }}>Loading news...</p>
       )}
     </>
   );

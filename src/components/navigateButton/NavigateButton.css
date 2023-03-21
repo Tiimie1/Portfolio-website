@@ -6,3 +6,7 @@
 .navText {
   color: aqua;
 }
+
+.navText[data-active="true"] {
+  color: yellow;
+}

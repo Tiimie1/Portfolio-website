@@ -1,10 +1,22 @@
 import React from "react";
 import "./NavigateButton.css";
 
-const NavigateButton = ({ text, number }: { text: string; number: string }) => {
+const NavigateButton = ({
+  text,
+  number,
+  active,
+}: {
+  text: string;
+  number: string;
+  active: boolean;
+}) => {
   return (
     <div className="textContainer">
-      <p className="navText" style={{ margin: 0, padding: 4 }}>
+      <p
+        className="navText"
+        style={{ margin: 0, padding: 4 }}
+        data-active={active}
+      >
         {text}
       </p>
       <p style={{ margin: 0, padding: 4 }}>
