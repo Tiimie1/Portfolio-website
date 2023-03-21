@@ -4,8 +4,12 @@ export const NavigationItems = [
     number: "110",
   },
   {
-    text: "Projects",
+    text: "Github",
     number: "200",
+  },
+  {
+    text: "Projects",
+    number: "220",
   },
   {
     text: "Contact",
@@ -14,5 +18,9 @@ export const NavigationItems = [
   {
     text: "Something",
     number: "400",
+  },
+  {
+    text: "News",
+    number: "600",
   },
 ];

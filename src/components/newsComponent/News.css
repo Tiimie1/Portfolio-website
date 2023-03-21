@@ -1,0 +1,9 @@
+.newsTitleContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.newsTitle {
+  color: lightgreen;
+}
