@@ -9,11 +9,11 @@ export const NavigationItems = [
   //   number: "200",
   //   path: "/github",
   // },
-  // {
-  //   text: "Projects",
-  //   number: "220",
-  //   path: "/projects",
-  // },
+  {
+    text: "Projects",
+    number: "200",
+    path: "/projects",
+  },
   {
     text: "Contact",
     number: "300",
