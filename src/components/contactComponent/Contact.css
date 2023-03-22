@@ -1,0 +1,21 @@
+.sqaure {
+  width: 30px;
+  height: 20px;
+}
+
+.contactText {
+  margin: 0;
+  padding: 0;
+}
+
+.displayRow {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+
+.navigationNumber {
+}

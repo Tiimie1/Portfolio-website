@@ -38,13 +38,22 @@ const News = () => {
                 {news.title.toUpperCase()}
               </p>
             </div>
-            <p style={{ margin: 0, padding: 4 }}>
-              {news.text.substring(0, 500) + "..."}
+            <p style={{ margin: 0, padding: 4, textAlign: "justify" }}>
+              {news.text.substring(0, 520) + "..."}
             </p>
           </div>
         </>
       ) : (
-        <p style={{ margin: 0, padding: 4 }}>Loading news...</p>
+        <p
+          style={{
+            margin: 0,
+            padding: 4,
+            textAlign: "justify",
+            marginRight: 4,
+          }}
+        >
+          Loading now...
+        </p>
       )}
     </>
   );

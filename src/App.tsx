@@ -2,22 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Appbar from "./components/layout/appbar/Appbar";
 import Navbar from "./components/layout/navbar/Navbar";
-import HomePage from "./pages/homePage/HomePage";
+import NewsPage from "./pages/newsPage/NewsPage";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import AboutMePage from "./pages/aboutMePage/AboutMePage";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import WelcomeDialog from "./components/welcomeDialog/WelcomeDialog";
+import ContactPage from "./pages/contactPage/ContactPage";
+import Bottombar from "./components/layout/bottombar/Bottombar";
 
 function App() {
   const [keySequence, setKeySequence] = useState("");
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(true);
+  const [showDialog, setShowDialog] = useState(true);
+  const [showContinue, setShowContinue] = useState(true);
 
-  const toggleDialogBox = () => {
-    setIsOpen(!isOpen);
-  };
-
-  //Acknowledge a keydown event
+  //Acknwledge a keydown event
   useEffect(() => {
     const handleKeyDown = (event: { key: string }) => {
       const key = event.key.toLowerCase();
@@ -35,60 +34,51 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setKeySequence("");
-    }, 2000);
+    }, 1000);
 
     if (keySequence.length === 3) {
-      console.log(keySequence);
       setKeySequence("");
       clearInterval(interval);
     }
 
-    if (keySequence === "xyz") {
-      console.log(keySequence);
-    } else if (keySequence === "110") {
-      navigate("/about");
-    } else if (keySequence === "600") {
+    if (keySequence === "110") {
       navigate("/");
+    } else if (keySequence === "200") {
+      navigate("/");
+    } else if (keySequence === "600") {
+      navigate("/news");
+    } else if (keySequence === "999") {
+      setShowDialog(false);
+      localStorage.setItem("hasVisited", "true");
+    } else if (keySequence === "300") {
+      navigate("/contact");
     }
 
     return () => clearInterval(interval);
   }, [keySequence]);
 
-  // Keep track of distance mouse is moved
-  // const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-  //   const { movementX, movementY } = event;
-  //   const distanceMoved = Math.sqrt(Math.pow(movementX, 2) + Math.pow(movementY, 2));
-  //   setDistance(distance + distanceMoved);
-
-  //   if (distanceMoved + distanceMoved >  100 ) {
-  //     //TOOD alert here
-  //     window.alert('You have moved your mouse 1000 pixels!');
-  //   }
-  // };
-
-  // <div onMouseMove={handleMouseMove}>
+  //Check if its a first time user to show WelcomeDialog
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (hasVisited) {
+      setShowDialog(false);
+    } else {
+      setShowDialog(true);
+    }
+  }, []);
 
   return (
     <>
       <Appbar />
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutMePage />} />
+        <Route path="/" element={<AboutMePage />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-      {isOpen && (
-        <div className="dialog">
-          <div className="dialog-content">
-            <h2>WELCOME TO MY WEBSITE</h2>
-            <p>
-              Website is inspired by 90's teletext. You can navigate thru
-              website by pressing the right sequence of numbers
-            </p>
-            <button>Close</button>
-          </div>
-        </div>
-      )}
+      {showDialog && <WelcomeDialog showContinue={showContinue} />}
+      <Bottombar />
     </>
   );
 }

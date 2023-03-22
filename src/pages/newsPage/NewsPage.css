@@ -12,16 +12,3 @@
   width: 586px;
   border: 8px solid blueviolet;
 }
-
-.dividerWrapper {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  margin-top: 10px;
-}
-.divider {
-  background-color: red;
-  width: 600px;
-  height: 4px;
-}
