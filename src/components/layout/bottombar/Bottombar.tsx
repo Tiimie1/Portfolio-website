@@ -8,9 +8,7 @@ const Bottombar = () => {
       <div className="dividerWrapper">
         <div className="divider" />
       </div>
-      <div className="wrapperContainer1">
-        <Infobar />
-      </div>
+      <div className="wrapperContainer1">{/* <Infobar /> */}</div>
     </>
   );
 };
