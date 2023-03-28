@@ -3,6 +3,11 @@
   src: local("ModeSeven"), url(./fonts/modeseven.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "FFF Forward";
+  src: local("FFF Forward"), url(./fonts/FFFFORWA.TTF) format("truetype");
+}
+
 body {
   margin: 0;
   font-family: "ModeSeven";
