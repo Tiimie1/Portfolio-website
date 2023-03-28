@@ -1,6 +1,6 @@
 @font-face {
   font-family: "ModeSeven";
-  src: url("./fonts/modeseven.ttf") format("truetype");
+  src: url("/fonts/modeseven.ttf") format("truetype");
 }
 
 body {
