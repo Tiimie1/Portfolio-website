@@ -8,12 +8,14 @@ interface NewsData {
   link: string;
 }
 
+const API_URL = "https://tiimie-website-be.onrender.com/";
+
 const News = () => {
   const [news, setNews] = useState<NewsData | null>(null);
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/")
+      .get(`${API_URL}`)
       .then((response) => {
         const newsData: NewsData = {
           title: response.data.data.title,
