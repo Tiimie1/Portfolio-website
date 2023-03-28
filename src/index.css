@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "ModeSeven";
+  src: url("./fonts/modeseven.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   font-family: "ModeSeven";
