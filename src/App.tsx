@@ -78,7 +78,7 @@ function App() {
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       {showDialog && <WelcomeDialog showContinue={showContinue} />}
-      <Bottombar />
+      <Bottombar keySequence={keySequence} />
     </>
   );
 }

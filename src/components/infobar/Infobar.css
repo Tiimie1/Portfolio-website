@@ -1,0 +1,24 @@
+.infobarbg {
+  width: 600px;
+  height: 40px;
+  background-color: darkviolet;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infobarText {
+  color: yellow;
+  font-size: 20px;
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.keySeqText {
+  color: lightgreen;
+  font-size: 20px;
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
+}
