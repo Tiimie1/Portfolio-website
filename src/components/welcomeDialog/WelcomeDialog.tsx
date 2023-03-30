@@ -8,7 +8,8 @@ const WelcomeDialog = ({ showContinue }: { showContinue: boolean }) => {
         <h2>WELCOME TO MY WEBSITE</h2>
         <p>
           Website is inspired by 90's teletext. You can navigate through website
-          by pressing the right sequence of numbers on your keyboard
+          by pressing the right sequence of numbers on your keyboard. Also it is
+          in beta, so expect some things not to work
         </p>
         <p
           className="closeMessage"
