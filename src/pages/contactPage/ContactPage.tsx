@@ -11,8 +11,6 @@ const ContactPage = () => {
   return (
     <div className="wrapperContainer1">
       <div className="displayContainer1">{listContactItems}</div>
-      {/* <div className="displayRows"> */}
-      {/* </div> */}
     </div>
   );
 };

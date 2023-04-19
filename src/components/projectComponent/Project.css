@@ -1,0 +1,20 @@
+.contactText {
+  margin: 0;
+  padding: 0;
+}
+
+.titleRowProj {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ProjContainer {
+  width: 600px;
+  margin-bottom: 12px;
+}
+
+.descriptionRow {
+  margin-top: 8px;
+}

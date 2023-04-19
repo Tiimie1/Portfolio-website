@@ -5,6 +5,7 @@ import { NavigationItems } from "../../NavigationItems";
 import me from "./images/me.png";
 import sloTech from "./images/slo-tech.png";
 import socials from "./images/socials.png";
+import projects from "./images/projects.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -28,10 +29,13 @@ const Navbar = () => {
         <div className="firstContainer">
           {location.pathname === "/" && <img src={me} alt="Me image" />}
           {location.pathname === "/contact" && (
-            <img src={socials} alt="Socals image" />
+            <img src={socials} alt="Socials-image" />
           )}
           {location.pathname === "/news" && (
             <img src={sloTech} alt="slo-tech-logo" />
+          )}
+          {location.pathname === "/projects" && (
+            <img src={projects} alt="projects-logo" />
           )}
         </div>
         <div className="secondContainer">{listNavigationItems}</div>

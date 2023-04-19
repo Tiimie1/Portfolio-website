@@ -1,6 +1,8 @@
 import React from "react";
 import "./Appbar.css";
 
+//TODO: add margin-top: 38px on titletext if it is opened on windows
+
 const Appbar = () => {
   return (
     <div className="OuterBox">

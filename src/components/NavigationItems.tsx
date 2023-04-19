@@ -4,11 +4,6 @@ export const NavigationItems = [
     number: "110",
     path: "/",
   },
-  // {
-  //   text: "Github",
-  //   number: "200",
-  //   path: "/github",
-  // },
   {
     text: "Projects",
     number: "200",
@@ -19,11 +14,6 @@ export const NavigationItems = [
     number: "300",
     path: "/contact",
   },
-  // {
-  //   text: "Something",
-  //   number: "400",
-  //   path: "/github",
-  // },
   {
     text: "News",
     number: "600",
